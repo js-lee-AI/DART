@@ -74,6 +74,29 @@ The paper evaluates on public datasets, which are **not redistributed here**.
 Obtain them from their original sources under their respective licenses:
 MATH-500, OlympiadBench, HumanEval, MBPP, and AIME 2024/2025.
 
+## Results
+
+DART matches or exceeds always-thinking (AT) accuracy on **13 of 14** model–benchmark pairs while reducing thinking tokens by **15–69%**. Accuracy in %, with the change vs AT in parentheses; **Think↓** is the thinking-token reduction vs AT. NT = no-think, AT = always-think.
+
+| Model | Benchmark | NT | AT | DART (vs AT) | Think↓ |
+|---|---|---|---|---|---|
+| Qwen3-8B | MATH-500 | 76.6 | 85.6 | **88.2** (+2.6) | 67% |
+| Qwen3-8B | OlympiadBench | 49.8 | 71.5 | 69.8 (−1.7) | 45% |
+| Qwen3-8B | HumanEval | 60.4 | 59.1 | **78.7** (+19.6) | 55% |
+| Qwen3-8B | MBPP | 60.7 | 64.2 | **68.9** (+4.7) | 58% |
+| Qwen3-14B | MATH-500 | 81.2 | 87.6 | **87.6** (+0.0) | 37% |
+| Qwen3-14B | OlympiadBench | 51.5 | 53.0 | **62.0** (+9.0) | 15% |
+| Qwen3-14B | HumanEval | 71.3 | 66.5 | **78.7** (+12.2) | 60% |
+| Qwen3-14B | MBPP | 64.6 | 64.6 | **68.1** (+3.5) | 51% |
+| Qwen3-32B | MATH-500 | 82.2 | 86.2 | **88.5** (+2.3) | 69% |
+| Qwen3-32B | OlympiadBench | 50.5 | 54.0 | **58.5** (+4.5) | 16% |
+| Qwen3-32B | HumanEval | 79.9 | 72.6 | **95.1** (+22.5) | 63% |
+| Qwen3-32B | MBPP | 65.8 | 65.8 | **71.2** (+5.4) | 51% |
+| DeepSeek-V3.2 | MATH-500 | 84.8 | 88.4 | **92.6** (+4.2) | 56% |
+| DeepSeek-V3.2 | OlympiadBench | 63.6 | 66.1 | **69.1** (+3.0) | 32% |
+
+The only regression is Qwen3-8B on OlympiadBench (−1.7). DeepSeek-V3.2 is evaluated through the hosted API. No labeled data or gradient updates are used. See the paper for the SC-Route (Stage-1-only) and routing-rate columns.
+
 ## Citation
 
 A BibTeX entry will be added once the arXiv version is available.
