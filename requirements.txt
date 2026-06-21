@@ -1,0 +1,6 @@
+# The core DART routers (dart/) depend only on the Python standard library.
+# Real model backends need their own SDK, e.g.:
+#   openai>=1.0        # OpenAI-compatible servers (vLLM, hosted think/no-think APIs)
+#   vllm               # local serving of open-weight hybrid reasoning models
+# numpy is only needed for optional entropy/budget calibration utilities.
+numpy>=1.24
