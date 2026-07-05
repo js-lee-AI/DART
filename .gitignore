@@ -9,3 +9,7 @@ outputs/
 *.log
 .DS_Store
 .ipynb_checkpoints/
+
+# keep README figure assets
+!assets/
+!assets/*.png

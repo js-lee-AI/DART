@@ -1,21 +1,39 @@
-# DART: Draft-Agreement Routing for Training-Free Adaptive Thinking Budgets
+<div align="center">
 
-Reference implementation of DART, a training-free router for hybrid reasoning
-models (models that can answer directly or spend extra tokens on extended
-"thinking"). DART uses cheap no-think drafts as a query-level difficulty probe:
+# 🎯 DART
 
-* **Stage 1, SC-Route (draft agreement).** Sample `K=2` no-think drafts and
-  accept the answer when they agree under a pluggable equivalence function, and
-  route only disagreement cases to thinking.
-* **Stage 2, budget probing.** For routed (disagreement) queries, allocate a
-  query-specific thinking budget instead of always thinking to the cap.
+### Draft-Agreement Routing for Training-Free Adaptive Thinking Budgets
 
-No labeled difficulty data and no gradient updates are required, so DART works
-with text-only API access to closed hybrid models.
+[![arXiv](https://img.shields.io/badge/arXiv-2606.23181-b31b1b.svg)](https://arxiv.org/abs/2606.23181)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
+[![Paper: CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-blue.svg)](https://arxiv.org/abs/2606.23181)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
+[![Stars](https://img.shields.io/github/stars/js-lee-AI/DART?style=social)](https://github.com/js-lee-AI/DART/stargazers)
 
-> Paper: *DART: Draft-Agreement Routing for Training-Free Adaptive Thinking
-> Budgets in Hybrid Reasoning Models.* A BibTeX entry will be added once the
-> arXiv version is available.
+<img src="assets/framework.png" width="88%" alt="DART framework" />
+
+<em>A training-free router for hybrid reasoning models: cheap no-think drafts decide <b>when</b> to think, and how much.</em>
+
+<b><a href="https://arxiv.org/abs/2606.23181">📄 Paper</a> · <a href="#overview">✨ Overview</a> · <a href="#installation">⚙️ Installation</a> · <a href="#usage">🚀 Usage</a> · <a href="#results">📊 Results</a> · <a href="#citation">📌 Citation</a></b>
+
+</div>
+
+---
+
+## News
+
+- **2026-06** · Paper released on [arXiv](https://arxiv.org/abs/2606.23181), and the reference implementation is public here.
+
+## Overview
+
+**DART** is the reference implementation of a **training-free** router for hybrid reasoning models (models that can answer directly or spend extra tokens on extended "thinking"). DART uses cheap no-think drafts as a query-level difficulty probe:
+
+* **Stage 1, SC-Route (draft agreement).** Sample `K=2` no-think drafts and accept the answer when they agree under a pluggable equivalence function, and route only disagreement cases to thinking.
+* **Stage 2, budget probing.** For routed (disagreement) queries, allocate a query-specific thinking budget instead of always thinking to the cap.
+
+No labeled difficulty data and no gradient updates are required, so DART works with text-only API access to closed hybrid models.
+
+> Paper: *DART: Draft-Agreement Routing for Training-Free Adaptive Thinking Budgets in Hybrid Reasoning Models* ([arXiv:2606.23181](https://arxiv.org/abs/2606.23181)).
 
 ## What's in this repository
 
@@ -38,8 +56,7 @@ git clone https://github.com/js-lee-AI/DART.git && cd DART
 python example.py
 ```
 
-For real models, install a backend SDK (for example `pip install openai` for an
-OpenAI-compatible vLLM server) and implement the model-client contract below.
+For real models, install a backend SDK (for example `pip install openai` for an OpenAI-compatible vLLM server) and implement the model-client contract below.
 
 ## Usage
 
@@ -64,19 +81,15 @@ generate(prompt, enable_thinking, temperature, max_tokens, thinking_budget=None)
 }
 ```
 
-See `dart/model_client.py` for the abstract base class and a mock used by the
-example. Implement it for your hybrid model (a local vLLM or transformers
-server, or a hosted think/no-think API).
+See `dart/model_client.py` for the abstract base class and a mock used by the example. Implement it for your hybrid model (a local vLLM or transformers server, or a hosted think/no-think API).
 
 ## Benchmarks
 
-The paper evaluates on public datasets, which are **not redistributed here**.
-Obtain them from their original sources under their respective licenses:
-MATH-500, OlympiadBench, HumanEval, MBPP, and AIME 2024/2025.
+The paper evaluates on public datasets, which are **not redistributed here**. Obtain them from their original sources under their respective licenses: MATH-500, OlympiadBench, HumanEval, MBPP, and AIME 2024/2025.
 
 ## Results
 
-DART matches or exceeds always-thinking (AT) accuracy on **13 of 14** model–benchmark pairs while reducing thinking tokens by **15–69%**. Accuracy in %, with the change vs AT in parentheses; **Think↓** is the thinking-token reduction vs AT. NT = no-think, AT = always-think.
+DART matches or exceeds always-thinking (AT) accuracy on **13 of 14** model-benchmark pairs while reducing thinking tokens by **15–69%**. Accuracy in %, with the change vs AT in parentheses; **Think↓** is the thinking-token reduction vs AT. NT = no-think, AT = always-think.
 
 | Model | Benchmark | NT | AT | DART (vs AT) | Think↓ |
 |---|---|---|---|---|---|
@@ -99,7 +112,7 @@ The only regression is Qwen3-8B on OlympiadBench (−1.7). DeepSeek-V3.2 is eval
 
 ## Citation
 
-```text
+```bibtex
 @article{lee2026dart,
   title={DART: Draft-Agreement Routing for Training-Free Adaptive Thinking Budgets in Hybrid Reasoning Models},
   author={Lee, Jungseob and Hong, Seongtae and Lee, Seungjun and Seo, Jaehyung and Son, Junyoung and Eo, Sugyeong and Park, Chanjun and Park, Hyeongju and Moon, Hyeonseok and Lim, Heuiseok},
@@ -110,5 +123,4 @@ The only regression is Qwen3-8B on OlympiadBench (−1.7). DeepSeek-V3.2 is eval
 
 ## License
 
-The code in this repository is released under the [MIT License](LICENSE). The
-paper itself is distributed under CC BY 4.0 via arXiv.
+The code in this repository is released under the [MIT License](LICENSE). The paper itself is distributed under CC BY 4.0 via arXiv.
