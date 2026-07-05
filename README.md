@@ -99,7 +99,14 @@ The only regression is Qwen3-8B on OlympiadBench (−1.7). DeepSeek-V3.2 is eval
 
 ## Citation
 
-A BibTeX entry will be added once the arXiv version is available.
+```text
+@article{lee2026dart,
+  title={DART: Draft-Agreement Routing for Training-Free Adaptive Thinking Budgets in Hybrid Reasoning Models},
+  author={Lee, Jungseob and Hong, Seongtae and Lee, Seungjun and Seo, Jaehyung and Son, Junyoung and Eo, Sugyeong and Park, Chanjun and Park, Hyeongju and Moon, Hyeonseok and Lim, Heuiseok},
+  journal={arXiv preprint arXiv:2606.23181},
+  year={2026}
+}
+```
 
 ## License
 
