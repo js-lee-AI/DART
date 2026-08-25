@@ -4,6 +4,7 @@
 
 ### Draft-Agreement Routing for Training-Free Adaptive Thinking Budgets
 
+[![EMNLP 2026](https://img.shields.io/badge/EMNLP%202026-Findings-8A2BE2.svg)](https://2026.emnlp.org/)
 [![arXiv](https://img.shields.io/badge/arXiv-2606.23181-b31b1b.svg)](https://arxiv.org/abs/2606.23181)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
 [![Paper: CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-blue.svg)](https://arxiv.org/abs/2606.23181)
@@ -22,6 +23,7 @@
 
 ## News
 
+- **2026-08** · Accepted to **Findings of EMNLP 2026**.
 - **2026-06** · Paper released on [arXiv](https://arxiv.org/abs/2606.23181), and the reference implementation is public here.
 
 ## Overview
