@@ -13,6 +13,8 @@
 
 <img src="assets/framework.png" width="88%" alt="DART framework" />
 
+<b>Official implementation of the <a href="https://2026.emnlp.org/">Findings of EMNLP 2026</a> paper.</b>
+
 <em>A training-free router for hybrid reasoning models: cheap no-think drafts decide <b>when</b> to think, and how much.</em>
 
 <b><a href="https://arxiv.org/abs/2606.23181">📄 Paper</a> · <a href="#overview">✨ Overview</a> · <a href="#installation">⚙️ Installation</a> · <a href="#usage">🚀 Usage</a> · <a href="#results">📊 Results</a> · <a href="#citation">📌 Citation</a></b>
@@ -23,6 +25,7 @@
 
 ## News
 
+- **2026-10** · Presenting at **EMNLP 2026** in Budapest, 24 to 29 October. See you there.
 - **2026-08** · Accepted to **Findings of EMNLP 2026**.
 - **2026-06** · Paper released on [arXiv](https://arxiv.org/abs/2606.23181), and the reference implementation is public here.
 
