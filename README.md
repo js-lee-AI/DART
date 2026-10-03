@@ -6,6 +6,7 @@
 
 [![EMNLP 2026](https://img.shields.io/badge/EMNLP%202026-Findings-8A2BE2.svg)](https://2026.emnlp.org/)
 [![arXiv](https://img.shields.io/badge/arXiv-2606.23181-b31b1b.svg)](https://arxiv.org/abs/2606.23181)
+[![Project Page](https://img.shields.io/badge/Project-Page-1b4fb0.svg)](https://js-lee-ai.github.io/DART/)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
 [![Paper: CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-blue.svg)](https://arxiv.org/abs/2606.23181)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
@@ -17,7 +18,7 @@
 
 <em>A training-free router for hybrid reasoning models: cheap no-think drafts decide <b>when</b> to think, and how much.</em>
 
-<b><a href="https://arxiv.org/abs/2606.23181">📄 Paper</a> · <a href="#overview">✨ Overview</a> · <a href="#installation">⚙️ Installation</a> · <a href="#usage">🚀 Usage</a> · <a href="#results">📊 Results</a> · <a href="#citation">📌 Citation</a></b>
+<b><a href="https://js-lee-ai.github.io/DART/">🌐 Project Page</a> · <a href="https://arxiv.org/abs/2606.23181">📄 Paper</a> · <a href="#overview">✨ Overview</a> · <a href="#installation">⚙️ Installation</a> · <a href="#usage">🚀 Usage</a> · <a href="#results">📊 Results</a> · <a href="#citation">📌 Citation</a></b>
 
 </div>
 
