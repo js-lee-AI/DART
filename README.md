@@ -11,7 +11,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
 [![Stars](https://img.shields.io/github/stars/js-lee-AI/DART?style=social)](https://github.com/js-lee-AI/DART/stargazers)
 
-<img src="assets/framework.png" width="88%" alt="DART framework" />
+<img src="assets/framework.png" width="100%" alt="DART framework" />
 
 <b>Official implementation of the <a href="https://2026.emnlp.org/">Findings of EMNLP 2026</a> paper.</b>
 
