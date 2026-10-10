@@ -23,7 +23,7 @@
 </div>
 
 <p align="center">
-  <a href="https://js-lee-ai.github.io/DART/#race"><img src="assets/replay.gif" width="88%" alt="DART and always-think each answer one MATH-500 problem with Qwen3-8B on one RTX A6000. DART writes 332 tokens in 12.29 s and always-think writes 3,601 tokens in 129.44 s" /></a>
+  <a href="https://js-lee-ai.github.io/DART/#race"><img src="assets/replay.gif" width="100%" alt="DART and always-think each answer one MATH-500 problem with Qwen3-8B on one RTX A6000. DART writes 332 tokens in 12.29 s and always-think writes 3,601 tokens in 129.44 s" /></a>
 </p>
 
 <p align="center"><em>Qwen3-8B on one RTX A6000, played at 8× speed. The <a href="https://js-lee-ai.github.io/DART/#race">project page</a> replays it live.</em></p>
